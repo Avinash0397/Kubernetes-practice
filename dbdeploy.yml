@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: avinash031997-database
-  labels:
-    app: avinash031997
+  labels: 
+    app: avinash031997-db
 spec:
   selector:
     matchLabels:
@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: avinash031997
+        app: avinash031997-db
     spec:
       containers:
       - name: avinash031997
