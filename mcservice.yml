@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: avinash031997
+  name: avinash031997-mc-service
 spec:
-  ports:
-  - port: 11211
-    targetPort: avinash031997-database
-    protocol: TCP
   selector:
-    app: avinash031997
+    app: avinash031997-db
+  ports:
+    - port: 3306
+      targetPort: 3306
   type: ClusterIP
