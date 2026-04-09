@@ -16,4 +16,4 @@ spec:
           service:
             name: avinash031997-service
             port:
-              number: 9090
+              number: 8080
