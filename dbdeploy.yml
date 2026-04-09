@@ -20,7 +20,7 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/mysql
           name:  avinash031997-database
-        ports:
+        ports: vpro-db-data
         - name: vprodb-port
           containerPort: 3306
         env:
