@@ -8,5 +8,5 @@ spec:
     targetPort: mysql
     protocol: TCP
   selector:
-    app: avinash031997
+    app: avinash031997-db
   type: ClusterIP
