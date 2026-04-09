@@ -19,7 +19,7 @@ spec:
         image: avinash031997/database
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name:  avinash031997-database
+          name:  avinash-database
         ports: vpro-db-data
         - name: vprodb-port
           containerPort: 3306
