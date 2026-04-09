@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: db-pv-claim
   labels:
-    app: avinash031997/db
+    app: avinash031997-db
 spec:
   storageClassName: default
   accessModes:
