@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avinash031997/database
+  labels:
+    app: avinash031997
+spec:
+  selector:
+    matchLabels:
+      app: avinash031997
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: avinash031997
+    spec:
+      containers:
+      - name: avinash031997
+        image: avinash031997/database
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name:  avinash031997/database
+        ports:
+        - name: vprodb-port
+          containerPort: 3306
+        env:
+         - name: MYSQL_ROOT_PASSWORD
+           valueFrom:
+             secretKeyRef:
+               name: app-secret
+               key: db-pass
+      volumes:
+        - name: vpro-db-data
+          persistentVolumeClaim:
+            claimName: db-pv-claim 
+
+      initContainers:
+        - name: busybox
+          image: busybox:latest
+          command: ["sh", "-c", "rm -rf /var/lib/mysql/lost+found"]
+          volumeMounts:
+            - name: vpro-db-data
+              mountPath: /var/lib/mysql
