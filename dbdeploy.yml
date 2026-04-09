@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: avinash031997/database
+  name: avinash031997-database
   labels:
     app: avinash031997
 spec:
@@ -19,7 +19,7 @@ spec:
         image: avinash031997/database
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name:  avinash031997/database
+          name:  avinash031997-database
         ports:
         - name: vprodb-port
           containerPort: 3306
