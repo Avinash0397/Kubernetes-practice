@@ -5,7 +5,7 @@ metadata:
 spec:
   ports:
   - port: 3306
-    targetPort: avinash031997/database
+    targetPort: avinash031997-database
     protocol: TCP
   selector:
     app: avinash031997
